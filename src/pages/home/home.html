@@ -1,0 +1,118 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>CLICKX</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content scrollbar-y-auto>
+  <ion-card color="karl" style="border-radius:30px;">
+    <ion-card-header no-padding>
+      <ion-item text-center color="karl">
+        <button ion-button color="mint" icon-only medium clear item-left (click)="getCameraImage()">
+          <ion-icon class="fa-icon" name="camera"></ion-icon>
+        </button>
+        Prescription List
+        <button ion-button color="mint" icon-only clear item-right (click)="callStaff()">
+          <ion-icon class="fa-icon" name="call"></ion-icon></button>        
+      </ion-item>
+
+    </ion-card-header>
+    
+    <ion-card-content color="karl">
+          
+        <ion-scroll scrollY="true">
+          <ion-list *ngIf="Prescriptions.length > 0" >
+
+              <ion-item  color="karl"  *ngFor="let pres of Prescriptions; let in=index">
+                <ion-label color="dark">{{ in+1 }}.</ion-label>
+                <ion-input type="text" color="karl" [ngModel]="Prescriptions[in].name" ></ion-input>
+                <button item-right ion-button icon-only clear (click)="removeDrug(Prescriptions[in].name)">
+                <ion-icon color="danger" name="ios-trash-outline" ></ion-icon>
+              </button>
+              </ion-item>
+            </ion-list>
+            </ion-scroll>
+        
+
+      
+    </ion-card-content>    
+    <ion-item color="karl">
+              <ion-input type="text" color="karl" placeholder="Drug Name...." [(ngModel)]="Prescribe" ></ion-input>            
+              <button item-right ion-button icon-only clear large (click)="addDrug(Prescribe)">
+                <ion-icon color="dark" name="ios-add-outline" ></ion-icon>
+              </button>
+            </ion-item>
+            
+    <button class="button-under hide-on-keyboard-open" ion-button icon-only full color="mint" no-padding>
+          SEND
+        </button>
+
+  </ion-card>
+
+  <div text-center style="margin-top: 20px;">
+  <button style="color: red; border-color:red;" ion-button outline (click)="pharModal()">Ask a Pharmacist</button>
+</div>
+
+  <ion-row wrap *ngIf="cameraImage.length > 0">
+    <ion-col width-25 style="text-align: center;" *ngFor="let camera of cameraImage" >        
+       <div>
+          <img [src]="camera">
+       </div >
+       <div style=" color: red; position: relative; bottom: 60%; margin-bottom: -20%; height: 20; opacity: 0.5" ><ion-icon (click)="deleteImage(camera)" name="ios-close-circle" ></ion-icon></div>  
+    </ion-col>
+  </ion-row>
+
+  
+<ion-slides autoplay="7000" loop pager style="height: 30%; width: 100%; margin-top: 1em;">
+
+  <ion-slide>
+          <img src="assets/img/info.jpg">
+  </ion-slide>
+
+  <ion-slide>
+    <img src="assets/img/contactus.jpg">
+  </ion-slide>
+
+</ion-slides>  
+
+
+
+
+
+
+ <ion-grid style="margin-top: 1em; padding:0px; color: white;">
+  <ion-row text-center wrap>
+    <ion-col width-50 style="background-color:#FF5252; height: 10em; padding-top:2em " (click)="goToSearch($event)">
+    <img class="image" style="width:4em; height:4em;" src="assets/img/Search.png">
+           <p>Search</p>
+    </ion-col>
+     <ion-col width-50 style="background-color:#E91E63; height: 10em; padding-top:2em"  (click)="healthTip($event)">
+         <img class="image" style="width:4em; height:4em;" src="assets/img/health.png">
+            <p>Health Tips</p>
+     </ion-col>
+      <ion-col width-50 style="background-color:#4CAF50; height: 10em; padding-top:2em" (click)="profile($event)">
+          <img class="image"  style="width:4em; height:4em;" src="assets/img/profile.png">
+             <p>Profile</p>
+      </ion-col>
+        <ion-col width-50 style="background-color:#FF9800; height: 10em; padding-top:2em" tappable>
+          <img class="image"  style="width:4em; height:4em;" src="assets/img/About.png">
+             <p>About</p>
+      </ion-col>
+        <ion-col width-50 style="background-color:#2196F3;  height: 10em; padding-top:2em" tappable>
+          <img class="image"  style="width:4em; height:4em;" src="assets/img/Help.png">
+             <p>Help</p>
+      </ion-col>
+
+          <ion-col width-50 style="background-color:#009688; height: 10em; padding-top:2em"  (click)="login($event)">
+          <img class="image"  style="width:4em; height:4em;" src="assets/img/Exit.png">
+            <p>Logout</p>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+
+
+
+</ion-content>

@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center>Reminder</ion-title>
+  
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab color="primary" top right edge>
+    <button class="addReminder" (click)="addReminder($event)" ion-fab mini><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+ 
+
+
+<div *ngIf="calendarEvents.length > 0">
+
+  <ion-item *ngFor="let cal of calendarEvents; let in=index">
+<ion-card>
+
+  
+<div class="item item-divider">
+   <ion-item>
+    <ion-avatar item-left>
+          <ion-icon style="font-size:2em;" name="ios-alarm-outline" large></ion-icon> 
+     </ion-avatar>
+    <h2>{{ calendarEvents[in].title }}</h2>
+    <p></p>
+  </ion-item> 
+</div>
+  
+  <ion-card-content>
+    <p>{{ calendarEvents[in].startDate.slice(0,10) }}</p>
+  </ion-card-content>
+
+  <ion-row>
+    <ion-col>
+       <button ion-button icon-left clear small>
+        <ion-icon name="ios-create-outline"></ion-icon>
+        <div>EDIT</div>
+      </button>
+    </ion-col>
+    <ion-col>
+     
+    </ion-col>
+    <ion-col center text-center>
+     <button ion-button icon-left clear small (click)="deleteReminder(calendarEvents[in])">
+        <ion-icon name="ios-trash-outline" style="color: red;"></ion-icon>
+        <div style="color: red;">DELETE</div>
+      </button>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+</ion-item>
+</div>
+
+</ion-content>
+ 

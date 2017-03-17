@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+  
+    <ion-searchbar padding [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+   
+	  </ion-navbar>
+	</ion-header>
+
+<ion-content>
+
+     <ion-row >
+      <ion-col class="force"  *ngFor="let drug of drugs">
+
+        <ion-card class="card-stuff "  text-center>
+    
+        <ion-card-content>
+          <img src="{{drug.imageURL}}">
+          <h3>
+          {{drug.name}}
+          </h3>
+          <p>{{drug.description}}</p>
+          
+        </ion-card-content>
+        <button ion-button  block small (click)="editDrug()">Edit Drug</button>
+
+      </ion-card>
+    </ion-col>
+
+    </ion-row>
+
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+  
+    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()"></ion-searchbar>
+ 
+    <!-- <ion-list class="search-list">
+        <ion-item *ngFor="let drug of drugs">
+            {{drug.name}}
+        </ion-item>
+    </ion-list> -->
+
+  <ion-buttons end>   
+      <button ion-button icon-only style="float: left;" clear padding (click)="goToCheckOut($event)">
+        <ion-icon name="ios-cart" style="position:relative; font-weight:bold; font-size:2em;" color="primary" large>
+          <ion-badge mode="ios" style="position:absolute; font-weight:bold; top:-5px; left:15px; font-size:9px;" color="danger">{{cartItems.length}}</ion-badge>
+      </ion-icon>
+      </button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+
+
+
+ <p padding>SEARCH RESULTS</p>
+
+
+     <ion-row >
+      <ion-col class="force"  *ngFor="let drug of drugs">
+
+        <ion-card class="card-stuff "  text-center>
+    
+        <ion-card-content>
+          <img src="{{drug.imageURL}}">
+          <h3>
+          {{drug.name}}
+          </h3>
+          <p>{{drug.description}}</p>
+          
+        </ion-card-content>
+        <button ion-button [color]="drug.added ? 'secondary' : 'primary'" icon-right block small (click)="addToCart(drug)">Add to Cart <ion-icon name="md-medkit"></ion-icon></button>
+
+      </ion-card>
+    </ion-col>
+
+    </ion-row>
+<!--     </div> -->
+
+
+
+</ion-content>

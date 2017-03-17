@@ -1,0 +1,94 @@
+<!--
+  Generated template for the AddReminder page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title  text-center>Add</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<div>
+
+				
+				<div>
+				   	  <ion-item style=""> 
+				   	  		   
+						    <ion-label>Enter Drug Name:</ion-label>
+						    <ion-input placeholder="Title" type="text"  [(ngModel)]="title" (keyup)="filt()" right></ion-input>
+						    
+					  </ion-item>
+					  <ion-list style="" *ngIf="drugs.length > 0" (clickOutside)="closeOut()">
+					  	
+					  		<ion-item *ngFor="let drug of drugs | slice:0:3" (click)="select(drug)">
+					  			{{ drug.name }}
+					  		</ion-item>
+					  	
+					  </ion-list>
+				</div>
+				
+</div>
+
+	<ion-list no-lines>
+		<ion-item>
+			<ion-label >Start Date:</ion-label>
+			<ion-datetime text-center displayFormat="DD MMM 'YY" min="{{ minDate }}" max="2099" (ionChange)="minte()" pickerFormat="DD MMM YYYY" [(ngModel)]="startDate"></ion-datetime>
+		</ion-item>
+		<ion-item>
+			<ion-label >End Date:</ion-label>
+			<ion-datetime text-center displayFormat="DD MMM 'YY" min="{{ minDate }}" max="2099" pickerFormat="DD MMM YYYY" [(ngModel)]="endDate"></ion-datetime>
+		</ion-item>
+	</ion-list>
+		<div >
+			<ion-row wrap>
+				<ion-col width-50 *ngFor="let yes of timeArray; let in=index" >
+					<ion-item>
+					<ion-label>{{ in + 1 }}</ion-label>
+					<ion-datetime displayFormat="hh:mm a" pickerFormat="hh:mm a"  [(ngModel)]="timeArray[in]" ></ion-datetime>
+				</ion-item>
+				
+					<button padding color="danger" ion-button icon-only clear (click)="deleteTime(in)"><ion-icon name="trash"></ion-icon></button>
+				</ion-col>
+			</ion-row>
+			
+		</div>
+
+		
+
+		<ion-item *ngIf="!showForm">
+			<button ion-button (click)="showForm1()">Add New Time</button>
+		</ion-item>
+		
+
+	
+
+	<div *ngIf="showForm">
+		<ion-list no-lines>
+			<ion-item >
+				<ion-label >Select time:</ion-label>
+				<ion-datetime displayFormat="hh:mm a" pickerFormat="hh:mm a" [(ngModel)]="timeStuff"></ion-datetime>
+				
+			</ion-item>
+			<ion-item>
+				<button ion-button color="primary" (click)="addTime()">Add Time</button>
+				<button ion-button colour="danger" (click)="showForm=false">Cancel</button>
+			</ion-item>
+		</ion-list>
+
+	</div>
+	
+
+</ion-content>
+<ion-footer class="applyFooter">
+	<button colour="primary" full ion-button (click)="tweet()">Add Reminder</button>
+</ion-footer>
+
+
+

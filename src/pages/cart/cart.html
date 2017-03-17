@@ -1,0 +1,55 @@
+<!--
+  Generated template for the Chart page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>Cart</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#f0f0f0;">
+
+
+
+			<div style="padding:20px; height: 130px; background-color: #fff; margin-top:10px;  margin-bottom: 10px;" *ngFor="let cart of cartItems">
+					<div style="float: left;">
+						<img class="image" src="{{ cart.imageURL }}"/>
+					</div>
+					<div>
+						<h5>{{ cart.name }}</h5>
+						<p>{{ cart.description }}</p>
+					<div>
+						
+						<h6 style="float: left;">Qty: </h6>
+						<div style="float: left; margin-top=0px; padding: 0px 5px; ">
+								<ion-icon style="padding: 10px 10px 0px 10px; font-size:" name="add" color="primary" (tap)="addQty(cart)" ></ion-icon>
+								<!-- <input type="number" [ngModel]="qtyCount"> -->
+								{{ cart.qtyCount }}
+								<ion-icon name="remove" color="danger" style="padding: 10px 10px 0px 10px;" (tap)="reduceQty(cart)" ></ion-icon>
+
+
+						</div>
+						<h6 style="float: right;">Delete</h6>
+					</div>
+						
+					</div>
+			</div>
+
+		
+
+
+
+	
+  
+
+			<button class="btnDone" ion-button full name="add" (click)="success()">CHECK OUT</button>
+
+
+</ion-content>
+ 

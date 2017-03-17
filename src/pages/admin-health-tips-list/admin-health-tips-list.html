@@ -1,0 +1,54 @@
+<!--
+  Generated template for the AdminHealthTipsList page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Health Tips</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding-10>
+
+<ion-fab color="primary" top right edge>
+    <button class="addReminder" (click)="addHealthTips($event)" ion-fab mini><ion-icon name="add"></ion-icon></button>
+ </ion-fab>
+
+<ion-list>
+  <ion-item-sliding>
+    <ion-item>
+     
+        <ion-card>
+         <ion-card-content >
+         To lose weight, eat less and exercise more; to boost your energy, get more sleep; to prevent dehydration, drink more water. Others, however, are totally counterintuitive. The following 12 tips really do work—but they may leave you scratching your head
+         </ion-card-content>
+      </ion-card>
+
+      </ion-item>
+
+    <ion-item-options side="left">
+      <button ion-button color="primary">
+        <ion-icon name="text"></ion-icon>
+        Text
+      </button>
+      <button ion-button color="secondary">
+        <ion-icon name="call"></ion-icon>
+        Call
+      </button>
+    </ion-item-options>
+    <ion-item-options side="right">
+      <button ion-button color="primary">
+        <ion-icon name="mail"></ion-icon>
+        Email
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+
+     
+
+</ion-content>

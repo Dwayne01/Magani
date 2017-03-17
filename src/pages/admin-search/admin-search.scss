@@ -1,0 +1,72 @@
+page-admin-search {
+
+.card{
+padding-bottom:10px;
+}
+
+.card-title{
+	margin-top: 10px;
+}
+
+.divcard{
+width: 50%;
+	float: left;
+	
+}
+
+
+	.card-stuff {
+		
+		padding: 0px;
+
+		margin-top: 0px;
+		
+		
+	}
+
+	.force {
+		flex: 0 0 30%;
+		max-width: 30%;
+	}
+
+	ion-row {
+		-webkit-flex-flow: row wrap;
+		justify-content: flex-start;
+
+	}
+
+	.card-stuff button {
+		margin-bottom: 0px;
+		font-size: 70%;
+		border-radius: 0px;
+
+	}
+
+	.card-stuff ion-card-header {
+	 margin-top: 0px;
+	 padding-right: 0px;
+	}
+
+	.card-stuff h3 {
+		padding-top: 10px;
+
+	}
+
+	.container {
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+
+	@media all and (max-width: 600px)
+{
+.force {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+    
+}
+
+	
+
+
+}

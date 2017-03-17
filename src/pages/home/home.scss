@@ -1,0 +1,44 @@
+page-home {
+	.list-ios>.item-block:first-child {
+    border-top: none;
+}	
+
+.list-md>.item-input:last-child {
+    border-bottom: none;
+    box-shadow: none;
+}	
+.list-ios>.item-input:last-child {
+    border-bottom: none;
+    box-shadow: none;
+}	
+
+.camImage{
+	
+	width:100%;
+}
+	.close{
+
+	z-index:100;
+	font-size: 2em;
+	}
+
+	.fa-icon {
+		font-size: 26px;
+	}
+
+	ion-scroll {
+  white-space: nowrap;
+  height: 150px
+}
+[scrollbar-y-auto] .scroll-content {
+  overflow-y: auto !important;
+}
+
+.hide-on-keyboard-open {
+
+	margin-bottom:0px;
+	bottom:0px;
+}
+
+}
+

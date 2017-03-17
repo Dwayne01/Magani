@@ -1,0 +1,54 @@
+r<!--
+  Generated template for the AdminHome page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title text-center>Home</ion-title>
+     
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+
+ <ion-grid style="margin-top: 1em; padding:0px; color: white;">
+  <ion-row text-center wrap>
+      <ion-col width-50 style="background-color:#FF9800; height: 10em; padding-top:2em" class="addDrug" (click)="addDrug($event)">
+          <img class="image"  style="width:4em; height:4em;" src="assets/img/plus.png">
+            <p>Add Drugs</p>
+      </ion-col>
+    <ion-col width-50 style="background-color:#FF5252; height: 10em; padding-top:2em " (click)="request($event)">
+    <img class="image" style="width:4em; height:4em;" src="assets/img/category.png">
+           <p>Request</p>
+    </ion-col>
+     <ion-col width-50 style="background-color:#E91E63; height: 10em; padding-top:2em" (click)="healthTip($event)">
+         <img class="image" style="width:4em; height:4em;" src="assets/img/health.png">
+            <p>Health Tips</p>
+     </ion-col>
+      <ion-col width-50 style="background-color:#4CAF50; height: 10em; padding-top:2em" (click)="searchDrug()">
+          <img class="image"  style="width:4em; height:4em;" src="assets/img/Search.png">
+             <p>Search</p>
+      </ion-col>
+
+        <ion-col width-50 style="background-color:#2196F3; height: 10em; padding-top:2em" (click)="messages($event)">
+          <img class="image"  style="width:4em; height:4em;" src="assets/img/Message.png">
+            <p>Messages</p>
+      </ion-col>
+         <ion-col width-50 style="background-color:#009688; height: 10em; padding-top:2em"  (click)="login($event)">
+          <img class="image"  style="width:4em; height:4em;" src="assets/img/Exit.png">
+            <p>Logout</p>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+  
+
+</ion-content>

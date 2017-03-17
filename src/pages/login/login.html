@@ -1,0 +1,41 @@
+<ion-header>
+	<ion-navbar>
+	</ion-navbar>
+ 
+</ion-header>
+
+<ion-content padding>
+
+
+<div style="margin-top: 30%;">
+
+     <button ion-button clear full (click)="goToHome()"></button>
+     
+
+     <ion-item style="padding-left: 5px;">        
+                <ion-input placeholder="Email" type="Email" right></ion-input>
+     </ion-item>
+
+   
+
+     <ion-item style=" margin-top: 3px; padding-left:5px;"> 
+                <ion-input placeholder="Password" type="password" right></ion-input>
+     </ion-item>
+
+ 
+
+     
+
+     <button color="primary" class="signin" ion-button full name="add" (click)="enterAdmin($event)">SIGN IN</button>
+
+    
+
+<div text-center >
+    <button (click)="registerPage($event)" class="register" ion-button clear> No Account? Register </button>
+</div>
+
+
+</div>  
+
+
+</ion-content>

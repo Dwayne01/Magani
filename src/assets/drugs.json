@@ -1,0 +1,42 @@
+[
+  		{
+  			"id": 1,
+  			"name": "Cough Syrup",
+  			"description": "1 mg",
+  			"category": "Sniffler",
+  			"imageURL": "assets/img/hyl-75241-3m.jpg",
+  			"added": false
+  		},
+  		{
+  			"id": 2,
+  			"name": "Panadol",
+  			"description": "50 mg",
+  			"category": "Sniffler",
+  			"imageURL": "assets/img/Panadol.jpg",
+  			"added": false
+  		},
+  		{
+  			"id": 3,
+  			"name": "Cough Syrup",
+  			"description": "1 mg",
+  			"category": "Sniffler",
+  			"imageURL": "assets/img/hyl-75241-3m.jpg",
+  			"added": false
+  		},
+  		{
+  			"id": 4,
+  			"name": "Panadol",
+  			"description": "50 mg",
+  			"category": "Sniffler",
+  			"imageURL": "assets/img/Panadol.jpg",
+  			"added": false
+  		},
+      {
+        "id": 5,
+        "name": "Panadol",
+        "description": "50 mg",
+        "category": "Sniffler",
+        "imageURL": "assets/img/Panadol.jpg",
+        "added": false
+      }
+]

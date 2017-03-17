@@ -1,0 +1,64 @@
+<!--
+  Generated template for the Store page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngIf="!showSearch">Store</ion-title>
+    <ion-buttons *ngIf="!showSearch" start>
+      <button ion-button icon-only (click)="showSearch=true">
+        <ion-icon name="ios-search" large>
+          
+      </ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-searchbar *ngIf="showSearch" (ionCancel)="showSearch1()" [(ngModel)]="searchTerm" showCancelButton (ionInput)="setFilteredItems()"></ion-searchbar>
+    <ion-buttons end>
+      <button ion-button icon-only padding (click)="goToCheckOut($event)">
+        <ion-icon name="ios-cart" style="position:relative; font-weight:bold; font-size:2em;" color="primary" large>
+        	<ion-badge mode="ios" style="position:absolute; font-weight:bold; top:-5px; left:15px; font-size:9px;" color="danger">{{cartItems.length}}</ion-badge>
+    	</ion-icon>
+      </button>
+      
+    </ion-buttons>
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+			
+      
+      <ion-row >
+      <ion-col class="force"  *ngFor="let drug of drugs">
+
+				<ion-card class="card-stuff "  text-center>
+        <ion-card-header text-right>      
+          
+        
+      </ion-card-header>
+        <ion-card-content>
+          <img src="{{drug.images[0]}}">
+          <h3>
+          {{drug.name}}
+          </h3>
+          <!-- <p>{{drug.description}}</p> -->
+          
+        </ion-card-content>
+        <button ion-button [color]="drug.added ? 'secondary' : 'primary'" icon-right block small (click)="addToCart(drug)">Add to Cart <ion-icon name="md-medkit"></ion-icon></button>
+
+      </ion-card>
+    </ion-col>
+
+    </ion-row>
+
+    
+
+		
+
+
+</ion-content>
