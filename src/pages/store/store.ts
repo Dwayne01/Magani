@@ -37,7 +37,7 @@ export class StorePage {
     this.apg.something.subscribe((value)=> {this.cartItems = value;});
 
     this.drugs.forEach ((some)=>{
-      if (this.cartItems.indexOf(some.id) > -1 ) {
+      if (this.cartItems.indexOf(some._id) > -1 ) {
         return some.added = true;
       }
     });
@@ -52,9 +52,9 @@ export class StorePage {
   		stuff.added = !stuff.added;
   		
   		if ( stuff.added === true) {
-  			this.cartItems.push(stuff.id);
+  			this.cartItems.push(stuff._id);
   		} else {
-  			let x: number = this.cartItems.indexOf(stuff.id);
+  			let x: number = this.cartItems.indexOf(stuff._id);
   			this.cartItems.splice(x, 1);
   		}  		
   }
@@ -64,7 +64,7 @@ export class StorePage {
      let transferItem: Array<any>;
 
      transferItem = this.drugs.filter( (item) => {
-       return this.cartItems.indexOf(item.id) > -1;
+       return this.cartItems.indexOf(item._id) > -1;
      });
 
      transferItem.forEach( (item) => {

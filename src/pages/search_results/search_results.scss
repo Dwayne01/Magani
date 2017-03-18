@@ -15,13 +15,18 @@ width: 50%;
 }
 
 
-	.card-stuff {
-		
-		padding: 0px;
+	.card-stuff{
+	height: 14.8em;
+	position: relative;
+	}
 
-		margin-top: 0px;
-		
-		
+	.card-stuff button {
+		margin-bottom: 0;
+		font-size: 70%;
+		border-radius: 0px;
+		position: absolute;
+		bottom:0;
+
 	}
 
 	.force {
@@ -35,21 +40,17 @@ width: 50%;
 
 	}
 
-	.card-stuff button {
-		margin-bottom: 0px;
-		font-size: 70%;
-		border-radius: 0px;
-
-	}
+	
 
 	.card-stuff ion-card-header {
 	 margin-top: 0px;
 	 padding-right: 0px;
 	}
 
-	.card-stuff h3 {
+		.card-stuff h5 {
 		padding-top: 10px;
-
+		font-size: 70%;
+		
 	}
 
 	.container {

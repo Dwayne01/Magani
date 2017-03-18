@@ -22,10 +22,17 @@ page-store {
 
 	}
 
+	.card-stuff{
+	height: 14.8em;
+	position: relative;
+	}
+
 	.card-stuff button {
-		margin-bottom: 0px;
+		margin-bottom: 0;
 		font-size: 70%;
 		border-radius: 0px;
+		position: absolute;
+		bottom:0;
 
 	}
 
@@ -34,9 +41,10 @@ page-store {
 	 padding-right: 0px;
 	}
 
-	.card-stuff h3 {
+	.card-stuff h5 {
 		padding-top: 10px;
-
+		font-size: 70%;
+		
 	}
 
 	.container {

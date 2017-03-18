@@ -33,11 +33,11 @@
         <ion-card class="card-stuff "  text-center>
     
         <ion-card-content>
-          <img src="{{drug.imageURL}}">
+          <img src="{{drug.images[0]}}">
           <h3>
           {{drug.name}}
           </h3>
-          <p>{{drug.description}}</p>
+          <!-- <p>{{drug.description}}</p> -->
           
         </ion-card-content>
         <button ion-button [color]="drug.added ? 'secondary' : 'primary'" icon-right block small (click)="addToCart(drug)">Add to Cart <ion-icon name="md-medkit"></ion-icon></button>

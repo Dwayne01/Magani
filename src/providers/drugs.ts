@@ -12,7 +12,7 @@ export class DrugService {
   options: RequestOptions
  
   constructor(private http: Http) {
-      this.drugURL = 'http://magani.herokuapp.com/drugs/';
+      this.drugURL = 'assets/drugs.json';
       this.headers = new Headers ({'content-type': 'application/json'});
       this.options = new RequestOptions ({headers: this.headers}); 
   }
