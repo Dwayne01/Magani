@@ -6,26 +6,28 @@
 	  </ion-navbar>
 	</ion-header>
 
-<ion-content>
+<ion-content padding>
 
-     <ion-row >
-      <ion-col class="force"  *ngFor="let drug of drugs">
-
-        <ion-card class="card-stuff "  text-center>
-    
-        <ion-card-content>
-          <img src="{{drug.imageURL}}">
-          <h3>
+<ion-list class="force"  *ngFor="let drug of drugs">
+  <ion-item-sliding>
+    <ion-item>
+      <ion-avatar item-left>
+         <img src="{{drug.images[0]}}">
+      </ion-avatar>
+      <h3 class="title">
           {{drug.name}}
-          </h3>
-          <p>{{drug.description}}</p>
-          
-        </ion-card-content>
-        <button ion-button  block small (click)="editDrug()">Edit Drug</button>
-
-      </ion-card>
-    </ion-col>
-
-    </ion-row>
+      </h3>
+    </ion-item>
+    <ion-item-options side="right">
+      <button ion-button color="danger">
+       Delete
+      </button>
+      <button ion-button color="blue">
+       Edit
+      </button>
+    </ion-item-options>
+   
+  </ion-item-sliding>
+</ion-list>
 
 </ion-content>

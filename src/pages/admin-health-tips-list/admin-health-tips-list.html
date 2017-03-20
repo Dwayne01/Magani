@@ -18,36 +18,22 @@
     <button class="addReminder" (click)="addHealthTips($event)" ion-fab mini><ion-icon name="add"></ion-icon></button>
  </ion-fab>
 
-<ion-list>
-  <ion-item-sliding>
-    <ion-item>
-     
         <ion-card>
+        <ion-card-header>
+         Title
+         </ion-card-header>
          <ion-card-content >
          To lose weight, eat less and exercise more; to boost your energy, get more sleep; to prevent dehydration, drink more water. Others, however, are totally counterintuitive. The following 12 tips really do work—but they may leave you scratching your head
          </ion-card-content>
+          <ion-row>
+          <ion-col>
+          <button ion-button icon-left clear small>
+            <div color="red">Delete</div>
+          </button>
+          </ion-col>
+          </ion-row>
+
       </ion-card>
-
-      </ion-item>
-
-    <ion-item-options side="left">
-      <button ion-button color="primary">
-        <ion-icon name="text"></ion-icon>
-        Text
-      </button>
-      <button ion-button color="secondary">
-        <ion-icon name="call"></ion-icon>
-        Call
-      </button>
-    </ion-item-options>
-    <ion-item-options side="right">
-      <button ion-button color="primary">
-        <ion-icon name="mail"></ion-icon>
-        Email
-      </button>
-    </ion-item-options>
-  </ion-item-sliding>
-</ion-list>
 
      
 

@@ -5,7 +5,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
   <ion-fab color="primary" top right edge>
     <button class="addReminder" (click)="addReminder($event)" ion-fab mini><ion-icon name="add"></ion-icon></button>
@@ -13,47 +13,24 @@
  
 
 
-<div *ngIf="calendarEvents.length > 0">
+<p>Swipe Right to delete</p>
 
-  <ion-item *ngFor="let cal of calendarEvents; let in=index">
-<ion-card>
-
-  
-<div class="item item-divider">
-   <ion-item>
-    <ion-avatar item-left>
-          <ion-icon style="font-size:2em;" name="ios-alarm-outline" large></ion-icon> 
-     </ion-avatar>
-    <h2>{{ calendarEvents[in].title }}</h2>
-    <p></p>
-  </ion-item> 
-</div>
-  
-  <ion-card-content>
-    <p>{{ calendarEvents[in].startDate.slice(0,10) }}</p>
-  </ion-card-content>
-
-  <ion-row>
-    <ion-col>
-       <button ion-button icon-left clear small>
-        <ion-icon name="ios-create-outline"></ion-icon>
-        <div>EDIT</div>
-      </button>
-    </ion-col>
-    <ion-col>
+<ion-list  *ngIf="calendarEvents.length > 0">
+  <ion-item-sliding>
+    <ion-item *ngFor="let cal of calendarEvents; let in=index">
+      <ion-avatar item-left>
+          <ion-icon style="font-size:3em;" name="ios-alarm-outline" large></ion-icon>
+      </ion-avatar>
+      <h3 style="font-weight: 700;">{{ calendarEvents[in].title }}</h3>
+      <p>{{ calendarEvents[in].startDate.slice(0,10) }} <strong>To</strong> {{ calendarEvents[in].endDate.slice(0,10) }}</p> 
+    </ion-item>
+    <ion-item-options side="right">
+      <button ion-button color="danger" (click)="deleteReminder(calendarEvents[in])">Delete </button>
      
-    </ion-col>
-    <ion-col center text-center>
-     <button ion-button icon-left clear small (click)="deleteReminder(calendarEvents[in])">
-        <ion-icon name="ios-trash-outline" style="color: red;"></ion-icon>
-        <div style="color: red;">DELETE</div>
-      </button>
-    </ion-col>
-  </ion-row>
-
-</ion-card>
-</ion-item>
-</div>
+    </ion-item-options>
+   
+  </ion-item-sliding>
+</ion-list>
 
 </ion-content>
  

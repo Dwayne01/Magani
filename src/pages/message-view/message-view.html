@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>messageView</ion-title>
+    <ion-title>Message</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -30,7 +30,7 @@
   </ion-item>
 
   <ion-item>
-    <ion-label>Password</ion-label>
+    <ion-label>Phone:</ion-label>
     <ion-input value="08132090813" type="number" disable="true"></ion-input>
   </ion-item>
 
@@ -50,8 +50,10 @@
 
   </div>
 
-    <button class="btnDone" (click)="saveItem()" ion-button full name="add">DONE</button>
-
+  
 
 
 </ion-content>
+<ion-footer>
+  <button (click)="saveItem()" ion-button full name="add">DONE</button>
+</ion-footer>

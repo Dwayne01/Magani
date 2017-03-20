@@ -24,10 +24,7 @@ width: 50%;
 		
 	}
 
-	.force {
-		flex: 0 0 30%;
-		max-width: 30%;
-	}
+	
 
 	ion-row {
 		-webkit-flex-flow: row wrap;
@@ -57,16 +54,14 @@ width: 50%;
 		padding-top: 0px;
 	}
 
-	@media all and (max-width: 600px)
-{
-.force {
-		flex: 0 0 50%;
-		max-width: 50%;
-	}
-    
+.title{
+overflow:hidden;
+text-overflow:ellipsis;
 }
-
 	
+.force{
+	border:none;
+}
 
 
 }

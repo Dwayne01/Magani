@@ -20,7 +20,11 @@
 <ion-content padding>
 
   <div text-center padding >
-    <ion-textarea elastic style="border: solid 1px blue; padding: 2px;" [(ngModel)]="pharMsg"   (keydown)="onKey()"></ion-textarea>
+    <ion-item style=""> 
+        <ion-label>Title</ion-label>
+        <ion-input placeholder="" type="text" right></ion-input>    
+    </ion-item>
+    <ion-textarea elastic placeholder="Health Tip" style=" margin-top: 20px; border: solid 1px blue; padding: 2px;" [(ngModel)]="pharMsg"   (keydown)="onKey()"></ion-textarea>
     <p style="margin-bottom:0px;" color="{{ charColor }}" text-right>{{charRemaining}}</p>
     <button ion-button round (click)="submitPharMsg()">Send</button>
   </div>

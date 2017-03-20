@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { NavController, App } from 'ionic-angular';
 //import { TabsPage } from '../ps/tabs/tabs';
 import { AddDrugPage } from '../add-drug/add-drug';
-import { RequestPage } from '../request/request';
+import { RequestTypesPage } from '../request-types/request-types';
 import { LoginPage } from '../login/login';
 import { MessagesPage } from '../messages/messages';
-import { AdminHealthTipsPage } from '../admin-health-tips/admin-health-tips';
+import { AdminHealthTipsListPage } from '../admin-health-tips-list/admin-health-tips-list';
 import { AdminSearchPage } from '../admin-search/admin-search';
 
 /*
@@ -24,7 +24,7 @@ export class AdminHomePage {
 
    healthTip (event) {
 
-      this.app.getRootNav().push(AdminHealthTipsPage);
+      this.app.getRootNav().push(AdminHealthTipsListPage);
     }
 
   messages (event) {
@@ -39,7 +39,7 @@ export class AdminHomePage {
 
      request (event) {
 
-      this.app.getRootNav().push(RequestPage);
+      this.app.getRootNav().push(RequestTypesPage);
     }
 
     login (event) {

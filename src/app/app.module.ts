@@ -28,6 +28,9 @@ import { AdminHealthTipsListPage } from '../pages/admin-health-tips-list/admin-h
 import { MessagesPage } from '../pages/messages/messages';
 import { MessageViewPage } from '../pages/message-view/message-view';
 import { AdminSearchPage } from '../pages/admin-search/admin-search';
+import { RequestTypesPage } from '../pages/request-types/request-types';
+import { StoreRequestListPage } from '../pages/store-request-list/store-request-list';
+import { StoreRequestViewPage } from '../pages/store-request-view/store-request-view';
 import { AppGlobals } from './global';
 import { ProfilePage } from '../pages/profile/profile';
 
@@ -61,7 +64,10 @@ import { ProfilePage } from '../pages/profile/profile';
     MessageViewPage,
     AdminSearchPage,
     ProfilePage,
-    AdminHealthTipsListPage
+    AdminHealthTipsListPage,
+    RequestTypesPage,
+    StoreRequestListPage,
+    StoreRequestViewPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -93,7 +99,10 @@ import { ProfilePage } from '../pages/profile/profile';
     MessageViewPage,
     AdminSearchPage,
     ProfilePage,
-    AdminHealthTipsListPage
+    AdminHealthTipsListPage,
+    RequestTypesPage,
+    StoreRequestListPage,
+    StoreRequestViewPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, DrugService, Storage, FilterService, AppGlobals]
 })

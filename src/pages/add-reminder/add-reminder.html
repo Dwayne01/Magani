@@ -48,13 +48,13 @@
 	</ion-list>
 		<div >
 			<ion-row wrap>
-				<ion-col width-50 *ngFor="let yes of timeArray; let in=index" >
+				<ion-col class="time" width-50 *ngFor="let yes of timeArray; let in=index" >
 					<ion-item>
 					<ion-label>{{ in + 1 }}</ion-label>
 					<ion-datetime displayFormat="hh:mm a" pickerFormat="hh:mm a"  [(ngModel)]="timeArray[in]" ></ion-datetime>
-				</ion-item>
+				    </ion-item>
 				
-					<button padding color="danger" ion-button icon-only clear (click)="deleteTime(in)"><ion-icon name="trash"></ion-icon></button>
+					<button class="time"  padding color="danger" ion-button icon-only clear (click)="deleteTime(in)"><ion-icon name="trash"></ion-icon></button>
 				</ion-col>
 			</ion-row>
 			
@@ -84,6 +84,14 @@
 
 	</div>
 	
+	<div style="font-size: 12px; opacity: 0.7;">
+	    <strong>Instructions</strong>
+		<p>1. Enter Title</p>
+		<p>2. Enter Start and End Date</p>
+		<p>3. Add time to select time</p>
+		<p>4. Set time to set the selected time </p>
+		<p>5. Add reminder to finish</p>
+	</div>
 
 </ion-content>
 <ion-footer class="applyFooter">
