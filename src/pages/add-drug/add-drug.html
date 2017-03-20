@@ -14,33 +14,45 @@
 
 
 <ion-content>
-
-<img src="assets/img/upload.jpg">
+<div text-center>
+	<img (click)="addImage()" [src]="cameraImage">
+</div>
 
 
 <div padding>
 	
 		
  <ion-item> 
-	  	<ion-input placeholder="Drug Name" type="text" right></ion-input>
+	  	<ion-input placeholder="Drug Name" type="text" [(ngModel)]="name" right></ion-input>
  </ion-item>
  <ion-item> 	  	
-	  	<ion-input placeholder="Drug Strength" type="text" right></ion-input>
+	  	<ion-input placeholder="Drug Strength" type="text" [(ngModel)]="strength" right></ion-input>
  </ion-item>	  
  <ion-item> 
 	    <ion-label>Category</ion-label>
-	    <ion-select [(ngModel)]="gaming">
-		      <ion-option value="nes">NES</ion-option>
-		      <ion-option value="n64">Nintendo64</ion-option>
-		      <ion-option value="ps">PlayStation</ion-option>
-		      <ion-option value="genesis">Sega Genesis</ion-option>
-		      <ion-option value="saturn">Sega Saturn</ion-option>
-		      <ion-option value="snes">SNES</ion-option>
+	    <ion-select [(ngModel)]="category">
+		      <ion-option value="allergy">Allergy</ion-option>
+		      <ion-option value="analgesics">Analgesics</ion-option>
+		      <ion-option value="anti_diabetes">Anti Diabetes</ion-option>
+		      <ion-option value="anti_malaria">Anti Malaria</ion-option>
+		      <ion-option value="anti_microbials">Anti Microbials</ion-option>
+		      <ion-option value="cardiovascular">Cardiovascular</ion-option>
+		      <ion-option value="coughandcold">Cough and Cold</ion-option>
+		      <ion-option value="dermatological">Dermatological</ion-option>
+		      <ion-option value="digestive_care">Digestive Care</ion-option>
+		      <ion-option value="ear_care">Ear Care</ion-option>
+		      <ion-option value="eye_care">Eye Care</ion-option>
+		      <ion-option value="pom">POM</ion-option>
+		      <ion-option value="sedatives">Sedatives</ion-option>
+		      <ion-option value="supplement">Supplements</ion-option>
+		      <ion-option value="vitamins">Vitamins</ion-option>
 	    </ion-select>
   </ion-item>
 
 </div>
 
-	<button class="successful" (click)="successful($event)" ion-button full name="add">DONE</button>
-
 </ion-content>
+
+<ion-footer>
+	<button (click)="successful($event)" ion-button full name="add">DONE</button>
+</ion-footer>
